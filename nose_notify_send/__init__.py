@@ -8,8 +8,8 @@ from subprocess import call
 def notify(icon, msg):
     image_name = os.path.join(os.path.dirname(__file__),
             '{0}.png'.format(icon))
-    cmd = "notify-send --hint int:transient:1 -t 2000"
-    cmd = cmd.split() + ['-i', image_name, msg]
+    cmd = "notify-send -t 2000"
+    cmd = cmd.split() + ['-i', image_name, 'nosetests', msg]
     call(cmd)
 
 
