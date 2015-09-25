@@ -8,8 +8,9 @@ from subprocess import call
 def notify(icon, msg):
     image_name = os.path.join(os.path.dirname(__file__),
             '{0}.png'.format(icon))
-    cmd = "notify-send -t 10000"
+    cmd = "notify-send -t 5000"
     cmd = cmd.split() + ['-i', image_name, 'nosetests', msg]
+    print '\7', # short beep
     call(cmd)
 
 
