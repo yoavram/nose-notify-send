@@ -8,7 +8,7 @@ from subprocess import call
 def notify(icon, msg):
     image_name = os.path.join(os.path.dirname(__file__),
             '{0}.png'.format(icon))
-    cmd = "notify-send -t 2000"
+    cmd = "notify-send -t 10000"
     cmd = cmd.split() + ['-i', image_name, 'nosetests', msg]
     call(cmd)
 
