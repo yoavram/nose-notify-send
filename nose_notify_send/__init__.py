@@ -3,14 +3,14 @@
 import os
 from nose.plugins import Plugin
 from subprocess import call
-
+from __future__ import print_function
 
 def notify(icon, msg):
     image_name = os.path.join(os.path.dirname(__file__),
             '{0}.png'.format(icon))
     cmd = "notify-send -t 5000"
     cmd = cmd.split() + ['-i', image_name, 'nosetests', msg]
-    print '\7', # short beep
+    print('\7'), # short beep
     call(cmd)
 
 
