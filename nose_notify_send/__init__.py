@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
+from __future__ import print_function
 import os
 from nose.plugins import Plugin
 from subprocess import call
-from __future__ import print_function
 
 def notify(icon, msg):
     image_name = os.path.join(os.path.dirname(__file__),
